@@ -95,7 +95,7 @@ public abstract class StatementGenerator {
             generators[0].execute(method);
         } else {
             JBPopupFactory.getInstance().createListPopup(
-                    new BaseListPopupStep("[ Statement type for method: " + method.getName() + "]", generators) {
+                    new BaseListPopupStep("[ Statement type for method: " + method.getName() + "]", generators[0]) {
                         @Override
                         public PopupStep onChosen(Object selectedValue, boolean finalChoice) {
                             return this.doFinalStep(new Runnable() {
